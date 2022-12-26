@@ -1,0 +1,356 @@
+/* ---------- GLOBAL STYLES ---------- */
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #020312;
+  --text-color: #fff;
+  --primary-color: #eb4a4a;
+  --secondary-color: grey;
+  --black: #000;
+  --white: #fff; 
+  --main-container: 132rem;
+  --grid-gap: 2rem;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--text-font);
+}
+
+section{
+  padding-top: 10rem;
+  padding-right: 5rem;
+  padding-bottom: 10rem;
+  padding-left: 5rem;
+}
+
+.container {
+  max-width: var(--main-container);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro{
+  color: var(--primary-color);
+}
+
+.section__intro{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__intro h2{
+  color: var(--primary-color);
+}
+
+.section__intro h4{
+  margin-top: 0.5rem;
+}
+
+h1 {
+  font-size: var(--h1-font);
+}
+
+h2 {
+  font-size: var(--h2-font);
+}
+
+h3 {
+  font-size: var(--h3-font);
+}
+
+h4 {
+  font-size: var(--h4-font);
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 4rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover{
+  background-color: var(--white);
+  color: var(--black);
+
+}
+
+/* ---------- HEADER STYLES ---------- */
+
+header {
+  height: 12rem;
+  margin-bottom: -12rem;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 999;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:#000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  min-width: 20rem;
+  max-width: 25rem;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+.nav-item:last-of-type {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.nav-item a {
+  color: var(--text-color);
+  /* Underline Pre-Styles */
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  overflow: hidden;
+}
+
+.nav-item a:hover {
+  color: var(--primary-color);
+}
+
+/* Underline Effect with Hover */
+.nav-item a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--primary-color);
+  opacity: 1;
+  transform: translate3d(-125%, 0, 0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav-item a:hover::after,
+.nav-item a:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+/* ---------- HERO STYLES ---------- */
+
+.hero {
+  position: relative;
+  height: 60vh;
+  padding-top: 30rem;
+}
+
+.hero__bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 99;
+}
+
+.hero-content * + *{
+    margin-top: 1.25rem;
+}
+
+.hero-content h1 {
+  line-height: 1em;
+}
+
+.surname {
+  color: var(--primary-color);
+}
+
+/* ---------- ABOUT SECTION STYLES ---------- */
+
+.about-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+}
+
+.about-content * + *{
+  margin-top: 1.25rem;
+}
+
+.about-content__features{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.about-content__features * + *{
+  margin-top: 0;
+}
+
+.about-content__features h4{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+/* ---------- SERVICES SECTION STYLES ---------- */
+
+.services__content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  margin-top: 5rem;
+}
+
+/* ---------- PORTFOLIO SECTION STYLES ---------- */
+
+.portfolio__content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  margin-top: 5rem;
+}
+
+/* ---------- CONTACT SECTION STYLES ---------- */
+
+.contact-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+}
+
+/* ---------- COPYRIGHT STYLES ---------- */
+
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* X-Small devices (landscape phones, 575px and down) */
+@media (max-width: 575px) {
+    :root {
+      --h1-font: 3rem;
+      --h2-font: 2.4rem;
+      --h3-font: 1.8rem;
+      --h4-font: 1.4rem;
+      --text-font: 1.4rem;
+    }
+  }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  :root {
+    --h1-font: 4rem;
+    --h2-font: 3rem;
+    --h3-font: 2rem;
+    --h4-font: 1.4rem;
+    --text-font: 1.4rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --h1-font: 5rem;
+    --h2-font: 3.6rem;
+    --h3-font: 2.2rem;
+    --h4-font: 1.6rem;
+    --text-font: 1.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  :root {
+    --h1-font: 6rem;
+    --h2-font: 4rem;
+    --h3-font: 2.4rem;
+    --h4-font: 1.8rem;
+    --text-font: 1.6rem;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  :root {
+    --h1-font: 8rem;
+    --h2-font: 5rem;
+    --h3-font: 3rem;
+    --h4-font: 2rem;
+    --text-font: 1.6rem;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  :root {
+    --h1-font: 8rem;
+    --h2-font: 5rem;
+    --h3-font: 3rem;
+    --h4-font: 2rem;
+    --text-font: 1.8rem;
+  }
+}

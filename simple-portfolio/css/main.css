@@ -23,8 +23,8 @@ html {
 :root {
   --bg-color: #020312;
   --text-color: #fff;
-  --primary-color: #eb4a4a;
-  --secondary-color: grey;
+  --primary-color: #257373;
+  --secondary-color: #25ffff;
   --black: #000;
   --white: #fff; 
   --main-container: 132rem;
@@ -154,7 +154,7 @@ header {
 }
 
 .nav-item a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* Underline Effect with Hover */
@@ -165,7 +165,7 @@ header {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   opacity: 1;
   transform: translate3d(-125%, 0, 0);
   transition: opacity 300ms, transform 300ms;

@@ -1,5 +1,6 @@
 # Alperen Özkan - Github Projects Hub
-Please check the projects I want to share with you. 
+
+## Live Projects
 
 [Simple Portfolio Project](/simple-portfolio)
 

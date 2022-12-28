@@ -127,8 +127,7 @@ header {
 }
 
 .logo {
-  min-width: 20rem;
-  max-width: 25rem;
+  width: 17.5rem;
 }
 
 .nav-list {

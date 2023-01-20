@@ -41,10 +41,33 @@ html{
     cursor: pointer;
 }
 
+.todo__list{
+    margin-top: 2rem;
+}
+
 .todo__item{
     color: red;
     font-size: 1.8rem;
     font-weight: 700;
+    padding: 0.5rem;
+}
+
+.todo__item::before{
+    content: " ";
+    display: flex;
+    width:100%;
+    height: 0.3rem;
+    background-color: #f1f1f1;
+    margin-bottom: 0.5rem;
+}
+
+.todo__item:last-of-type::after{
+    content: " ";
+    display: flex;
+    width:100%;
+    height: 0.3rem;
+    background-color: green;
+    margin-top: 0.5rem;
 }
 
 

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 62,5%;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.todo__container{
+    min-height: 30rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo__input{
+    width: 25rem;
+    height: 2.5rem;
+}
+
+.todo__btn{
+    width: 10rem;
+    height: 2rem;
+    align-self: flex-end;
+    margin-top: 1rem;
+    background-color: #000;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.todo__item{
+    color: red;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+

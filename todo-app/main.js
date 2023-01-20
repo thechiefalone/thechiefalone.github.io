@@ -5,7 +5,7 @@ let todoList = document.querySelector(".todo__list");
 todoBtn.addEventListener("click", addTodo);
 
 // Add Task with Enter 
-document.addEventListener("keyup", (e) => {
+todoInput.addEventListener("keyup", (e) => {
     if(e.key === "Enter"){
         addTodo();
     }

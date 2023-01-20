@@ -8,6 +8,11 @@ html{
     font-size: 62,5%;
 }
 
+body{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+}
+
 .main-container{
     width: 100vw;
     height: 100vh;
@@ -46,10 +51,12 @@ html{
 }
 
 .todo__item{
-    color: red;
+    color: #fff;
     font-size: 1.8rem;
     font-weight: 700;
-    padding: 0.5rem;
+}
+.todo__item span{
+    padding-left: 1rem;
 }
 
 .todo__item::before{
@@ -66,7 +73,7 @@ html{
     display: flex;
     width:100%;
     height: 0.3rem;
-    background-color: green;
+    background-color: #f1f1f1;
     margin-top: 0.5rem;
 }
 

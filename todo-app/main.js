@@ -14,12 +14,15 @@ todoInput.addEventListener("keyup", (e) => {
 function addTodo(){
     let todoItem = document.createElement("p");
     todoItem.classList.add("todo__item");
-    todoItem.innerText = todoInput.value;
+    let todoItemSpan = document.createElement("span");
+    todoItem.appendChild(todoItemSpan);
+    todoItemSpan.innerText = todoInput.value;
 
     todoList.appendChild(todoItem);
 
     if(todoInput.value === ""){
         swal("Please enter a task !!!");
+        todoList.removeChild(todoItem);
     }else{
         todoInput.value = "";
     }
